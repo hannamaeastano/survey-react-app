@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client'; // Use the new ReactDOM client
 import './index.css';
 import App from './App';
+import 'notyf/notyf.min.css';
 
 // Create a root and render the App component
 const root = ReactDOM.createRoot(document.getElementById('root'));
