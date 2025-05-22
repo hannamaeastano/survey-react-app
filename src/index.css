@@ -1,13 +1,92 @@
-body {
+* {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+}
+
+h1 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 20px 0;
+  color: #004080; /* Dark blue */
+}
+
+.survey-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.question {
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border-top: 4px solid #004080; /* Dark blue border on the top only */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for better visual separation */
+}
+
+.question p {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.options-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.option-label {
+  display: inline-block;
+  padding: 10px 15px;
+  margin: 0 5px;
+  border: 1px solid #ccc;
+  border-radius: 10px; /* Rounded edges for pill-style buttons */
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+  font-size: 14px;
+  text-align: center;
+  background-color: #f9f9f9; /* Light gray background */
+}
+
+.option-label:hover {
+  background-color: #e6f2ff; /* Light blue hover effect */
+  border-color: #004080; /* Dark blue border on hover */
+}
+
+.option-label.selected {
+  background-color: #004080; /* Dark blue background for selected */
+  color: #fff; /* White text for selected */
+  border-color: #004080;
+}
+
+button {
+  display: block;
+  width: auto;
+  padding: 10px 20px;
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #535c64; /* Dark blue button */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #003366; /* Slightly darker blue on hover */
 }
