@@ -16,25 +16,25 @@ h1 {
   font-size: 24px;
   font-weight: bold;
   margin: 20px 0;
-  color: #004080; /* Dark blue */
+  color: #004080;
 }
 
 .survey-container {
   max-width: 1000px;
-  margin: 40px auto;
-  padding: 20px;
+  margin: 20px auto;
+  padding: 15px;
   background-color: #f9f9f9;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .question {
-  padding: 20px;
-  margin-bottom: 20px;
+  padding: 15px;
+  margin-bottom: 15px;
   background-color: #fff;
-  border-top: 4px solid #004080; /* Dark blue border on the top only */
+  border-top: 4px solid #004080;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for better visual separation */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .question p {
@@ -45,42 +45,45 @@ h1 {
 
 .options-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  gap: 10px;
 }
 
 .option-label {
-  display: inline-block;
-  padding: 10px 15px;
-  margin: 0 5px;
+  flex: 1 1 calc(20% - 10px);
+  min-width: 120px;
+  padding: 10px 5px;
+  margin: 0;
   border: 1px solid #ccc;
-  border-radius: 10px; /* Rounded edges for pill-style buttons */
+  border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s, border-color 0.3s, color 0.3s;
   font-size: 14px;
   text-align: center;
-  background-color: #f9f9f9; /* Light gray background */
+  background-color: #f9f9f9;
 }
 
 .option-label:hover {
-  background-color: #e6f2ff; /* Light blue hover effect */
-  border-color: #004080; /* Dark blue border on hover */
+  background-color: #e6f2ff;
+  border-color: #004080;
 }
 
 .option-label.selected {
-  background-color: #004080; /* Dark blue background for selected */
-  color: #fff; /* White text for selected */
+  background-color: #004080;
+  color: #fff;
   border-color: #004080;
 }
 
 button {
-  display: block;
-  width: auto;
-  padding: 10px 20px;
-  margin-top: 20px;
+  width: 100%;
+  max-width: 200px;
+  padding: 12px 20px;
+  margin: 20px auto 0;
   font-size: 16px;
   font-weight: bold;
   color: #fff;
-  background-color: #535c64; /* Dark blue button */
+  background-color: #535c64;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -88,5 +91,39 @@ button {
 }
 
 button:hover {
-  background-color: #003366; /* Slightly darker blue on hover */
+  background-color: #003366;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .survey-container {
+    margin: 10px;
+    padding: 10px;
+  }
+  
+  .question {
+    padding: 12px;
+  }
+  
+  .option-label {
+    flex: 1 1 calc(50% - 10px);
+    font-size: 13px;
+    padding: 8px 5px;
+  }
+  
+  h1 {
+    font-size: 20px;
+    margin: 15px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .option-label {
+    flex: 1 1 100%;
+    font-size: 12px;
+  }
+  
+  .question p {
+    font-size: 15px;
+  }
 }
